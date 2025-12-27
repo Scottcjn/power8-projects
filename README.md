@@ -16,3 +16,23 @@ Ubuntu 22.04 officially dropped POWER8 support - binaries are compiled with POWE
 - [ ] Rebuild critical system packages
 - [ ] Create Docker image
 - [ ] Create bootable ISO
+
+## Toolchain Versions
+
+### Native (PowerElyan / POWER8)
+- GCC 10.5.0
+- Clang 12.0.0
+- LLVM 12
+
+### Cross-Compiler (Darwin PPC)
+- powerpc-apple-darwin9-gcc 10.5.0
+- Target: Mac OS X 10.5 Leopard (PowerPC)
+
+## Model Performance (PSE-enabled)
+
+| Model | Size | Active Params | Speed |
+|-------|------|---------------|-------|
+| DeepSeek-V3 (671B) | 228 GB | ~33B MoE | 0.5 t/s |
+| Grok-2 (270B) | 164 GB | ~50B MoE | 0.3 t/s |
+| TinyLlama (1.1B) | 638 MB | 1.1B dense | 92 t/s |
+
