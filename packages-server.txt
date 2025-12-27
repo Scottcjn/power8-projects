@@ -1,0 +1,44 @@
+# PowerElyan Server Edition
+# Headless, containers, databases, networking
+
+# Core
+systemd systemd-sysv dbus udev init login passwd sudo
+
+# Package management
+apt apt-utils aptitude dpkg software-properties-common gnupg ca-certificates
+
+# Networking
+openssh-server openssh-client network-manager iproute2 iputils-ping net-tools
+ifupdown isc-dhcp-client netcat-openbsd dnsutils curl wget rsync nfs-common
+samba openvpn wireguard-tools
+
+# Security
+iptables nftables ufw fail2ban apparmor apparmor-utils openssl
+
+# Filesystems
+e2fsprogs xfsprogs btrfs-progs dosfstools lvm2 mdadm cryptsetup parted gdisk
+
+# Editors & shells
+vim nano bash bash-completion zsh tmux screen
+
+# Development essentials
+build-essential gcc g++ make cmake git python3 python3-pip python3-venv
+
+# POWER8 specific
+numactl libnuma-dev ppc64-diag powerpc-utils lsvpd
+
+# Containers
+docker.io docker-compose podman
+
+# Databases
+sqlite3 postgresql mariadb-server redis-server
+
+# Web servers
+nginx
+
+# Monitoring
+htop iotop sysstat nmon ncdu lsof procps
+
+# Utilities
+cron logrotate rsyslog chrony tree zip unzip xz-utils tar gzip
+lshw smartmontools hdparm pciutils usbutils man-db

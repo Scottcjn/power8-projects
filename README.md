@@ -1,45 +1,79 @@
-# PowerElyan Linux & POWER8 Development Tools
+# PowerElyan Linux
 
-## PowerElyan Linux 1.0 (Codename: AltiVec)
-A custom Linux distribution optimized for IBM POWER8 with PSE Vec_Perm.
+```
+  ██████╗  ██████╗ ██╗    ██╗███████╗██████╗ ███████╗██╗  ██╗   ██╗ █████╗ ███╗   ██╗
+  ██╔══██╗██╔═══██╗██║    ██║██╔════╝██╔══██╗██╔════╝██║  ╚██╗ ██╔╝██╔══██╗████╗  ██║
+  ██████╔╝██║   ██║██║ █╗ ██║█████╗  ██████╔╝█████╗  ██║   ╚████╔╝ ███████║██╔██╗ ██║
+  ██╔═══╝ ██║   ██║██║███╗██║██╔══╝  ██╔══██╗██╔══╝  ██║    ╚██╔╝  ██╔══██║██║╚██╗██║
+  ██║     ╚██████╔╝╚███╔███╔╝███████╗██║  ██║███████╗███████╗██║   ██║  ██║██║ ╚████║
+  ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝
+                              by Elyan Labs
+```
 
-### ISO Download
-- `powerelyan-1.0-ppc64le.iso` (755 MB)
+A multi-architecture Linux distribution optimized for AI inference, cryptocurrency mining, and exotic hardware.
 
-### Features
-- Debian Bookworm base (POWER8 compatible)
-- Pre-installed llama.cpp with PSE optimizations
-- Vec_Perm Non-Bijunctive Collapse
-- mftb Hardware Entropy Injection
-- RAM Coffers NUMA Optimization
-- Demo scripts for Grok-2 inference
+## Downloads
 
-### Default Credentials
-- User: `powerelyan` / Password: `powerelyan`
+**ISO Downloads**: [http://50.28.86.153/powerelyan/](http://50.28.86.153/powerelyan/)
+
+| Edition | ppc64le | x86_64 | aarch64 |
+|---------|---------|--------|---------|
+| Server | ✅ | 🔄 Soon | 🔄 Soon |
+| Workstation (MATE) | ✅ | 🔄 Soon | 🔄 Soon |
+| Full | ✅ | 🔄 Soon | 🔄 Soon |
+| Miner | ✅ | 🔄 Soon | 🔄 Soon |
+
+## Editions
+
+| Edition | Desktop | Size | Use Case |
+|---------|---------|------|----------|
+| **Server** | CLI | ~1.5 GB | Headless, containers, databases |
+| **Workstation** | MATE | ~3 GB | Development, daily use |
+| **Full** | MATE+ | ~4.5 GB | Everything + multimedia |
+| **Miner** | CLI | ~800 MB | RustChain mining node |
+
+## Features
+
+### PSE (Probabilistic Sequence Evolution)
+- **Vec_Perm Non-Bijunctive Collapse** - AI attention in single instruction
+- **mftb Hardware Entropy** - True randomness from POWER8 timebase
+- **RAM Coffers** - NUMA-aware weight banking
+- **L2/L3 Resident Prefetch** - Keep weights hot in cache
+
+### Pre-installed Software
+- llama.cpp with PSE optimizations
+- RustChain miner (Miner edition)
+- Docker & container tools (Server+)
+- Development toolchain (Workstation+)
+- MATE Desktop (Workstation+)
+
+## Quick Start
+
+```bash
+# Write ISO to USB
+sudo dd if=powerelyan-server-1.0-ppc64le.iso of=/dev/sdX bs=4M
+
+# Default login
+Username: powerelyan
+Password: powerelyan
+```
+
+## Documentation
+
+- [Full Roadmap](POWERELYAN_ROADMAP.md)
+- [Package Lists](packages-*.txt)
+- [Build Scripts](build_powerelyan.sh)
+
+## Cross-Compilers Included
+
+| Target | Toolchain | Location |
+|--------|-----------|----------|
+| powerpc-apple-darwin9 | GCC 10.5.0 | /opt/darwin-ppc/ |
+| x86_64-apple-darwin20 | Clang 12 | /opt/osxcross/ |
+| arm64-apple-darwin20 | Clang 12 | /opt/osxcross/ |
 
 ---
 
-## Cross-Compilers
+**Created by Elyan Labs**
 
-### Darwin PPC (Mac OS X 10.5 PowerPC)
-- Target: `powerpc-apple-darwin9`
-- GCC 10.5.0
-- Location: `/opt/darwin-ppc/`
-
-### Darwin x86_64/ARM64 (macOS 11+ Big Sur)
-- Targets: `x86_64-apple-darwin20.4`, `arm64-apple-darwin20.4`
-- Via osxcross
-- Location: `/opt/osxcross/`
-
----
-
-## PSE (Probabilistic Sequence Evolution)
-Custom AI inference optimizations for POWER8:
-- Vec_Perm dual-source shuffle (5 ops vs 80 on GPU)
-- Non-bijunctive collapse (prune + duplicate in single cycle)
-- mftb timebase entropy injection
-- L2/L3 resident prefetch via DCBT hints
-
----
-
-by Elyan Labs
+*AltiVec predates CUDA by 7 years*

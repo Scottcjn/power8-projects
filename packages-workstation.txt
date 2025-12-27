@@ -1,0 +1,60 @@
+# PowerElyan Workstation Edition  
+# MATE Desktop + Development tools
+
+# Include server packages
+# (will be merged)
+
+# MATE Desktop
+mate-desktop-environment
+mate-desktop-environment-extras
+mate-themes
+mate-icon-theme
+mate-backgrounds
+lightdm
+lightdm-gtk-greeter
+
+# X11 / Display
+xorg
+xserver-xorg
+xserver-xorg-video-fbdev
+mesa-utils
+
+# Fonts
+fonts-dejavu
+fonts-liberation
+fonts-noto
+fonts-ubuntu
+
+# Desktop apps
+firefox-esr
+thunderbird
+libreoffice
+file-roller
+pluma
+atril
+eom
+mate-terminal
+mate-calc
+caja
+engrampa
+
+# Development
+neovim
+code
+git-gui
+gitk
+meld
+
+# Multimedia
+vlc
+rhythmbox
+cheese
+
+# Graphics
+gimp
+inkscape
+
+# System tools
+gparted
+gnome-disk-utility
+synaptic

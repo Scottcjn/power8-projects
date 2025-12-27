@@ -1,0 +1,18 @@
+[Unit]
+Description=RustChain Miner - PowerElyan Edition
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=powerelyan
+WorkingDirectory=/home/powerelyan/rustchain
+Environment="RUSTCHAIN_NODE=https://50.28.86.131"
+ExecStart=/usr/bin/python3 /home/powerelyan/rustchain/rustchain_linux_miner.py
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

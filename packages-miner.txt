@@ -1,0 +1,26 @@
+# PowerElyan Miner Edition
+# Minimal OS for RustChain mining nodes
+# Auto-starts miner on boot with hardware fingerprinting
+
+# Core (minimal)
+systemd systemd-sysv dbus udev init login passwd sudo
+
+# Networking (essential only)
+openssh-server iproute2 iputils-ping net-tools curl wget
+
+# Python for miner
+python3 python3-pip python3-venv python3-requests
+
+# Hardware detection
+numactl lshw dmidecode smartmontools pciutils usbutils
+
+# Utilities (minimal)
+vim nano tmux htop cron chrony
+
+# Kernel
+linux-image-powerpc64le
+
+# RustChain Miner Components (copied separately)
+# - rustchain_linux_miner.py
+# - fingerprint_checks.py  
+# - hardware_fingerprint.py

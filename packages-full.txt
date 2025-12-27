@@ -1,0 +1,52 @@
+# PowerElyan Full Edition
+# Everything + multimedia + extras
+
+# Include workstation packages
+# (will be merged)
+
+# Additional development
+default-jdk
+nodejs
+npm
+rustc
+cargo
+golang
+ruby
+perl
+php
+
+# More editors
+emacs
+geany
+bluefish
+
+# Virtualization
+qemu-system-ppc
+libvirt-daemon-system
+virt-manager
+virtinst
+
+# More databases
+mongodb
+influxdb
+
+# Scientific
+python3-numpy
+python3-scipy
+python3-pandas
+python3-matplotlib
+python3-jupyter
+octave
+r-base
+
+# Multimedia production
+audacity
+kdenlive
+obs-studio
+blender
+
+# Extra utilities
+neofetch
+figlet
+cowsay
+fortune-mod
