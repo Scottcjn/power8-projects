@@ -1,38 +1,45 @@
-# Ubuntu 22.04 for POWER8 Build Project
+# PowerElyan Linux & POWER8 Development Tools
 
-## Problem
-Ubuntu 22.04 officially dropped POWER8 support - binaries are compiled with POWER9+ instructions.
+## PowerElyan Linux 1.0 (Codename: AltiVec)
+A custom Linux distribution optimized for IBM POWER8 with PSE Vec_Perm.
 
-## Solution
-1. Use debootstrap to create minimal Ubuntu 22.04 rootfs
-2. Cross-compile critical packages with -mcpu=power8
-3. Build Docker image from custom rootfs
-4. Create installer ISO
+### ISO Download
+- `powerelyan-1.0-ppc64le.iso` (755 MB)
 
-## Status
-- [ ] Set up cross-compilation toolchain
-- [ ] debootstrap base system
-- [ ] Rebuild glibc for POWER8
-- [ ] Rebuild critical system packages
-- [ ] Create Docker image
-- [ ] Create bootable ISO
+### Features
+- Debian Bookworm base (POWER8 compatible)
+- Pre-installed llama.cpp with PSE optimizations
+- Vec_Perm Non-Bijunctive Collapse
+- mftb Hardware Entropy Injection
+- RAM Coffers NUMA Optimization
+- Demo scripts for Grok-2 inference
 
-## Toolchain Versions
+### Default Credentials
+- User: `powerelyan` / Password: `powerelyan`
 
-### Native (PowerElyan / POWER8)
+---
+
+## Cross-Compilers
+
+### Darwin PPC (Mac OS X 10.5 PowerPC)
+- Target: `powerpc-apple-darwin9`
 - GCC 10.5.0
-- Clang 12.0.0
-- LLVM 12
+- Location: `/opt/darwin-ppc/`
 
-### Cross-Compiler (Darwin PPC)
-- powerpc-apple-darwin9-gcc 10.5.0
-- Target: Mac OS X 10.5 Leopard (PowerPC)
+### Darwin x86_64/ARM64 (macOS 11+ Big Sur)
+- Targets: `x86_64-apple-darwin20.4`, `arm64-apple-darwin20.4`
+- Via osxcross
+- Location: `/opt/osxcross/`
 
-## Model Performance (PSE-enabled)
+---
 
-| Model | Size | Active Params | Speed |
-|-------|------|---------------|-------|
-| DeepSeek-V3 (671B) | 228 GB | ~33B MoE | 0.5 t/s |
-| Grok-2 (270B) | 164 GB | ~50B MoE | 0.3 t/s |
-| TinyLlama (1.1B) | 638 MB | 1.1B dense | 92 t/s |
+## PSE (Probabilistic Sequence Evolution)
+Custom AI inference optimizations for POWER8:
+- Vec_Perm dual-source shuffle (5 ops vs 80 on GPU)
+- Non-bijunctive collapse (prune + duplicate in single cycle)
+- mftb timebase entropy injection
+- L2/L3 resident prefetch via DCBT hints
 
+---
+
+by Elyan Labs

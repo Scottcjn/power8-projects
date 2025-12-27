@@ -9,3 +9,9 @@ models/
 *.o
 *.a
 build/
+
+# Large files - too big for GitHub
+*.iso
+*.squashfs
+iso-build/
+rootfs-*/

@@ -1,0 +1,301 @@
+# PowerElyan Linux 1.0 - Full Distribution Package List
+# =====================================================
+
+# === CORE SYSTEM ===
+systemd
+systemd-sysv
+dbus
+udev
+init
+login
+passwd
+
+# === PACKAGE MANAGEMENT ===
+apt
+apt-utils
+aptitude
+dpkg
+software-properties-common
+gnupg
+ca-certificates
+
+# === NETWORKING ===
+openssh-server
+openssh-client
+network-manager
+networkd-dispatcher
+iproute2
+iputils-ping
+iputils-tracepath
+net-tools
+ifupdown
+isc-dhcp-client
+netcat-openbsd
+dnsutils
+bind9-host
+whois
+curl
+wget
+rsync
+lftp
+aria2
+nfs-common
+samba
+smbclient
+openvpn
+wireguard-tools
+
+# === FIREWALL & SECURITY ===
+iptables
+nftables
+ufw
+fail2ban
+apparmor
+apparmor-utils
+libpam-modules
+openssl
+gnupg2
+
+# === FILE SYSTEMS ===
+e2fsprogs
+xfsprogs
+btrfs-progs
+dosfstools
+ntfs-3g
+exfat-fuse
+exfat-utils
+lvm2
+mdadm
+cryptsetup
+parted
+gdisk
+fdisk
+
+# === EDITORS ===
+vim
+vim-gtk3
+nano
+emacs-nox
+neovim
+micro
+
+# === SHELLS & TERMINALS ===
+bash
+bash-completion
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+fish
+tmux
+screen
+byobu
+
+# === DEVELOPMENT - COMPILERS ===
+build-essential
+gcc
+g++
+gfortran
+clang
+llvm
+make
+cmake
+ninja-build
+autoconf
+automake
+libtool
+pkg-config
+bison
+flex
+
+# === DEVELOPMENT - LANGUAGES ===
+python3
+python3-pip
+python3-venv
+python3-dev
+python3-numpy
+python3-scipy
+python3-pandas
+nodejs
+npm
+rustc
+cargo
+golang
+default-jdk
+ruby
+ruby-dev
+perl
+
+# === DEVELOPMENT - LIBRARIES ===
+libc6-dev
+libstdc++-12-dev
+libssl-dev
+libffi-dev
+libxml2-dev
+libxslt1-dev
+libyaml-dev
+libsqlite3-dev
+libpq-dev
+libmysqlclient-dev
+libcurl4-openssl-dev
+libbz2-dev
+liblzma-dev
+zlib1g-dev
+libreadline-dev
+libncurses5-dev
+
+# === DEVELOPMENT - TOOLS ===
+git
+git-lfs
+subversion
+mercurial
+gdb
+valgrind
+strace
+ltrace
+perf
+linux-perf
+
+# === POWER8/PPC64LE SPECIFIC ===
+numactl
+libnuma-dev
+libopenblas-dev
+libatlas-base-dev
+ppc64-diag
+powerpc-utils
+lsvpd
+librtas-dev
+
+# === AI/ML LIBRARIES ===
+libgomp1
+libomp-dev
+libopenblas-dev
+liblapack-dev
+hdf5-tools
+libhdf5-dev
+
+# === SYSTEM MONITORING ===
+htop
+btop
+iotop
+iftop
+nethogs
+nmon
+sysstat
+dstat
+glances
+ncdu
+lsof
+procps
+psmisc
+
+# === CONTAINERS & VIRTUALIZATION ===
+docker.io
+docker-compose
+podman
+buildah
+skopeo
+qemu-system-ppc
+libvirt-daemon-system
+virtinst
+virt-manager
+
+# === DATABASES ===
+sqlite3
+postgresql
+postgresql-client
+mariadb-server
+mariadb-client
+redis-server
+redis-tools
+
+# === WEB SERVERS ===
+nginx
+apache2
+lighttpd
+
+# === COMPRESSION ===
+zip
+unzip
+p7zip-full
+xz-utils
+lz4
+zstd
+pigz
+pbzip2
+rar
+unrar
+
+# === TEXT PROCESSING ===
+grep
+sed
+awk
+gawk
+jq
+yq
+xmlstarlet
+pandoc
+
+# === DOCUMENTATION ===
+man-db
+manpages
+manpages-dev
+info
+texinfo
+
+# === MULTIMEDIA (headless) ===
+ffmpeg
+imagemagick
+graphicsmagick
+sox
+
+# === LOGGING ===
+rsyslog
+logrotate
+journalctl
+
+# === TIME & SCHEDULING ===
+cron
+anacron
+at
+chrony
+ntpdate
+
+# === BACKUP ===
+borgbackup
+restic
+duplicity
+rclone
+
+# === HARDWARE TOOLS ===
+lshw
+hwinfo
+dmidecode
+smartmontools
+hdparm
+sdparm
+nvme-cli
+i2c-tools
+usbutils
+pciutils
+
+# === MISC UTILITIES ===
+tree
+rename
+moreutils
+parallel
+expect
+dialog
+whiptail
+bc
+dc
+units
+figlet
+toilet
+fortune-mod
+cowsay
+neofetch
+screenfetch
+
+# === POWER8 AI INFERENCE ===
+# (Pre-compiled llama.cpp with PSE already included)
+
