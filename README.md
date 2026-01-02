@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![POWER8](https://img.shields.io/badge/IBM-POWER8-red)](https://github.com/Scottcjn/power8-projects) [![Linux](https://img.shields.io/badge/Linux-ppc64le-yellow)](https://github.com/Scottcjn/power8-projects)
+
 # PowerElyan Linux
 
 ```
