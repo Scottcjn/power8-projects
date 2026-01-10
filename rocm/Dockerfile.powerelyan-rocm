@@ -1,0 +1,38 @@
+# PowerElyan ROCm Development Container
+# For building and testing ROCm on POWER8
+FROM debian:bookworm
+
+LABEL maintainer="Elyan Labs <sophia@elyanlabs.com>"
+LABEL description="PowerElyan ROCm Development - HSA/KFD for POWER8"
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install build essentials and kernel build deps
+RUN apt-get update && apt-get install -y \
+    build-essential gcc g++ make cmake git wget curl \
+    python3 python3-pip python3-venv \
+    libncurses-dev bison flex libssl-dev libelf-dev \
+    bc kmod cpio dpkg-dev debhelper \
+    libdrm-dev libdrm-amdgpu1 \
+    numactl libnuma-dev \
+    vim nano htop neofetch \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create ROCm directory structure
+RUN mkdir -p /opt/rocm/{bin,lib,include/hsa,llvm}
+
+# Set environment
+ENV PATH="/opt/rocm/bin:/opt/rocm/llvm/bin:${PATH}"
+ENV LD_LIBRARY_PATH="/opt/rocm/lib:${LD_LIBRARY_PATH}"
+
+# PowerElyan branding
+RUN echo "PowerElyan ROCm Dev 1.0" > /etc/powerelyan-release
+COPY powerelyan-branding.sh /etc/profile.d/powerelyan-motd.sh 2>/dev/null || true
+
+# Copy HSA kernel build script
+COPY build-hsa-kernel.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/build-hsa-kernel.sh
+
+WORKDIR /root
+
+CMD ["/bin/bash"]
