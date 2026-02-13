@@ -79,3 +79,10 @@ Password: powerelyan
 **Created by Elyan Labs**
 
 *AltiVec predates CUDA by 7 years*
+
+
+## 中文简介
+
+Elyan Labs 复古计算项目 - 为 PowerPC 和 SPARC 系统提供现代支持。
+
+Contributed by eelaine-wzw
