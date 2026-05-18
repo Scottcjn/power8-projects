@@ -63,9 +63,9 @@ Password: powerelyan
 
 ## Documentation
 
-- [Full Roadmap](POWERELYAN_ROADMAP.md)
-- [Package Lists](packages-*.txt)
-- [Build Scripts](build_powerelyan.sh)
+- [Full Roadmap](docs/POWERELYAN_ROADMAP.md)
+- [Package List](powerelyan-full-packages.txt)
+- [Build Script](scripts/build_powerelyan.sh)
 
 ## Cross-Compilers Included
 
