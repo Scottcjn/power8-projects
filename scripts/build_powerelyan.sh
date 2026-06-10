@@ -38,6 +38,12 @@ build_rootfs() {
     echo "[PowerElyan] Building rootfs..."
     mkdir -p "$ROOTFS_DIR"
     
+    # Ensure QEMU user static is installed for cross-architecture chroot
+    if ! command -v qemu-ppc64le-static &> /dev/null; then
+        echo "[PowerElyan] Installing qemu-user-static for ppc64el..."
+        sudo apt-get update && sudo apt-get install -y qemu-user-static binfmt-support
+    fi
+    
     # Debootstrap Debian Bookworm (POWER8 compatible)
     sudo debootstrap --arch=ppc64el bookworm "$ROOTFS_DIR" http://deb.debian.org/debian
     
@@ -83,8 +89,14 @@ CHROOT
 build_docker() {
     echo "[PowerElyan] Building Docker image..."
     
+    if ! command -v docker &> /dev/null; then
+        echo "Error: Docker is not installed. Please install Docker first."
+        exit 1
+    fi
+
     if [ -d "$ROOTFS_DIR" ]; then
-        sudo tar -C "$ROOTFS_DIR" -c . | sudo docker import - powerelyan:$VERSION
+        # Use -p to preserve permissions for system files
+        sudo tar -Cp "$ROOTFS_DIR" -c . | sudo docker import - powerelyan:$VERSION
         echo "[PowerElyan] Docker image: powerelyan:$VERSION"
     else
         echo "Error: Rootfs not found. Run: $0 rootfs"
