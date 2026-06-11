@@ -54,6 +54,8 @@ A multi-architecture Linux distribution optimized for AI inference, cryptocurren
 
 ```bash
 # Write ISO to USB
+# WARNING: Replace /dev/sdX with your actual device (e.g., /dev/sdb). 
+# Be extremely careful: using the wrong device will erase your data!
 sudo dd if=powerelyan-server-1.0-ppc64le.iso of=/dev/sdX bs=4M
 
 # Default login
@@ -63,6 +65,7 @@ Password: powerelyan
 
 ## Documentation
 
+- [BCOS Certification](BCOS.md)
 - [Full Roadmap](docs/POWERELYAN_ROADMAP.md)
 - [Package List](powerelyan-full-packages.txt)
 - [Build Script](scripts/build_powerelyan.sh)
